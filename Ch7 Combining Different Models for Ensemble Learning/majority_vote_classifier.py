@@ -2,7 +2,8 @@ from sklearn.base import BaseEstimator, ClassifierMixin, clone
 from sklearn.preprocessing import LabelEncoder
 from sklearn.pipeline import _name_estimators
 import numpy as np
-import operator
+
+# import operator
 
 
 class MajorityVoteClassifier(BaseEstimator, ClassifierMixin):
