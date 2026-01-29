@@ -10,7 +10,6 @@ repos:
     hooks:
       - id: flake8
         stages: [manual]
-        args: [--max-line-length=88]
         exclude: ^(Ch[0-9]+/|notebooks/)
 
   - repo: https://github.com/kynan/nbstripout
