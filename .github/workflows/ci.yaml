@@ -21,7 +21,8 @@ jobs:
 
       - name: Check notebooks are clean
         run: |
-          nbstripout **/*.ipynb
+          # Strip outputs only, keep IDs
+          nbstripout --keep-id **/*.ipynb
           git diff --exit-code
 
       - name: Format check
