@@ -6,7 +6,9 @@ import numpy as np
 # import operator
 
 
-class MajorityVoteClassifier(BaseEstimator, ClassifierMixin):
+class MajorityVoteClassifier(ClassifierMixin, BaseEstimator):
+    _estimator_type = "classifier"
+
     def __init__(self, classifiers, vote="classlabel", weights=None):
 
         self.classifiers = classifiers
