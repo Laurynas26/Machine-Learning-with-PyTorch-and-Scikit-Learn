@@ -19,4 +19,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
 
-      - run: pre-commit run --all-files
+      - name: Check notebooks are clean
+        run: |
+          nbstripout **/*.ipynb
+          git diff --exit-code
+
+      - name: Format check
+        run: black --check .
+
+      - name: Lint
+        run: flake8 .
