@@ -16,4 +16,4 @@ repos:
     rev: 0.7.1
     hooks:
       - id: nbstripout
-        stages: [commit, manual]
+        args: [--check]
